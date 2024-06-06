@@ -169,17 +169,46 @@ class UsersWithCities extends UsersWithId {
         this.address = address;
     }
 }
+
 const usersWithCities: UsersWithCities[] = usersWithId.map(user => {
     const address = citiesWithId.filter(city => city.user_id === user.id);
     return new UsersWithCities(user.id, user.name, user.age, user.status, address[0]);
 });
 console.log("///=====////===///")
-console.log(usersWithCities)
-//         - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
-//
+
+// - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+let randomNumbers2 = [12, 45, 67, 89, 23, 56, 78, 34, 90, 21];
+for (const number of randomNumbers2) {
+    if (number % 2 === 0) {
+        console.log(number)
+    }
+}
+
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
-//
+const randomNumbers3: number[] = randomNumbers2.reverse();
+const newRandomNumbers3: number[] = [];
+for (const randomNumber3 of randomNumbers3) {
+    newRandomNumbers3.push(randomNumber3)
+}
 //
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+const arr8: string[] = ['a', 'b', 'c']
+let word: string = "";
+for (let i: number = 0; i < arr8.length; i++) {
+    word += arr8[i]
+}
+console.log(word)
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+let word2: string = "";
+let i: number = 0;
+while (i < arr8.length) {
+    word2 += arr8[i]
+    i++
+}
+console.log(word2)
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+let word3: string = "";
+for (const elem of arr8) {
+    word3 += elem
+}
+console.log(word3)

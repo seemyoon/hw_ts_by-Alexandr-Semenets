@@ -16,9 +16,9 @@ var __extends = (this && this.__extends) || (function () {
 // 1. Створити пустий масив та :
 //     a. заповнити його 50 парними числами за допомоги циклу.
 var array1 = [];
-for (var i = 1; i <= 50; i++) {
-    if (i % 2 === 0) {
-        array1.push(i);
+for (var i_1 = 1; i_1 <= 50; i_1++) {
+    if (i_1 % 2 === 0) {
+        array1.push(i_1);
     }
 }
 console.log(array1);
@@ -51,30 +51,30 @@ if (random2 > 8 && random2 < 732) {
 console.log("--------");
 console.log(array4);
 // 2. Вивести за допомогою console.log кожен третій елемент
-for (var i = 0; i <= 12; i = i + 3) {
-    console.log(i);
+for (var i_2 = 0; i_2 <= 12; i_2 = i_2 + 3) {
+    console.log(i_2);
 }
 console.log("//3");
 // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
-for (var i = 0; i < 30; i = i + 3) {
-    if (i % 2 === 0) {
-        console.log(i);
+for (var i_3 = 0; i_3 < 30; i_3 = i_3 + 3) {
+    if (i_3 % 2 === 0) {
+        console.log(i_3);
     }
 }
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
 var newArr = [];
-for (var i = 0; i < 30; i = i + 3) {
-    if (i % 2 === 0) {
-        newArr[newArr.length] = i;
+for (var i_4 = 0; i_4 < 30; i_4 = i_4 + 3) {
+    if (i_4 % 2 === 0) {
+        newArr[newArr.length] = i_4;
     }
 }
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
 console.log("//5");
 var arr5 = [1, 2, 3, 5, 7, 9, 56, 8, 67];
-for (var i = 0; i <= arr5.length; i++) {
-    if (arr5[i + 1] % 2 === 0) {
-        console.log(arr5[i]);
+for (var i_5 = 0; i_5 <= arr5.length; i_5++) {
+    if (arr5[i_5 + 1] % 2 === 0) {
+        console.log(arr5[i_5]);
     }
 }
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
@@ -179,12 +179,41 @@ var usersWithCities = usersWithId.map(function (user) {
     return new UsersWithCities(user.id, user.name, user.age, user.status, address[0]);
 });
 console.log("///=====////===///");
-console.log(usersWithCities);
-//         - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
-//
+// - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+var randomNumbers2 = [12, 45, 67, 89, 23, 56, 78, 34, 90, 21];
+for (var _c = 0, randomNumbers2_1 = randomNumbers2; _c < randomNumbers2_1.length; _c++) {
+    var number = randomNumbers2_1[_c];
+    if (number % 2 === 0) {
+        console.log(number);
+    }
+}
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
-//
+var randomNumbers3 = randomNumbers2.reverse();
+var newRandomNumbers3 = [];
+for (var _d = 0, randomNumbers3_1 = randomNumbers3; _d < randomNumbers3_1.length; _d++) {
+    var randomNumber3 = randomNumbers3_1[_d];
+    newRandomNumbers3.push(randomNumber3);
+}
 //
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+var arr8 = ['a', 'b', 'c'];
+var word = "";
+for (var i_6 = 0; i_6 < arr8.length; i_6++) {
+    word += arr8[i_6];
+}
+console.log(word);
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+var word2 = "";
+var i = 0;
+while (i < arr8.length) {
+    word2 += arr8[i];
+    i++;
+}
+console.log(word2);
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+var word3 = "";
+for (var _e = 0, arr8_1 = arr8; _e < arr8_1.length; _e++) {
+    var elem = arr8_1[_e];
+    word3 += elem;
+}
+console.log(word3);
